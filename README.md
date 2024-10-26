@@ -1,1 +1,1 @@
-[https://github.com/Teoom/slozhno-sosredotochitsya](Сложно сосредоточиться)
+[Сложно сосредоточиться](https://github.com/Teoom/slozhno-sosredotochitsya)
