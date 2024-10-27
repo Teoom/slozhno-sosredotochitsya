@@ -46,6 +46,7 @@ a {
   font-size: inherit;
   line-height: inherit;
   cursor: pointer;
+  transition: all 0.5s linear;
 }
 
 button:focus,
@@ -58,7 +59,7 @@ button:focus-visible {
 }
 
 a:focus-visible {
-  outline: 1px solid var(--decor-color);
+  outline: 1px solid var(--text-color);
 }
 
 @media (hover: hover) {
