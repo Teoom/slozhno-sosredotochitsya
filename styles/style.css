@@ -34,7 +34,7 @@
 .header__decor::after {
   content: "";
   display: inline-block;
-  margin: 0 min(29px, max(19px, calc(100vi / 10 - 33px))) 2px 10px;
+  margin: 0 min(29px, max(19px, calc(100vi / 10 - 18.5px))) 2px 10px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--corner-color);
   background-color: var(--corner-color);
@@ -64,7 +64,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid #ff007040;
+  outline: 1px solid #ff0070;
 }
 
 .header__title {
@@ -91,20 +91,12 @@
   padding: var(--content-padding);
 }
 
-.section {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 .section:not(:last-of-type) {
   margin-bottom: min(80px, max(50px, calc(100vi / 10 + 10px)));
 }
 
-.article:nth-of-type(3) .article__list:first-of-type .article__list__title {
-  margin-block-end: 20px;
-}
 
-.article__title {
+.section__title {
   color: var(--decor-color);
   font-weight: 700;
   font-size: 18px;
@@ -112,30 +104,41 @@
   margin-block-end: 20px;
 }
 
-.article__list {
+.section__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.article__list__title {
+.section__list__title {
   margin-block-end: 10px;
 }
 
-.article__list__link {
+.section__list__link {
   text-decoration: none;
   text-shadow: 2px 2px #ff0070;
 }
 
+.advices {
+  margin-block-end: min(80px, max(50px, calc(100vi / 10 + 5px)));
+}
+
 .advices .article__title {
   color: var(--accent-color);
+  margin-block-end: 20px;
 }
 
 .advices .article__list {
-  margin-bottom: min(80px, max(50px, calc(100vi / 10 + 5px)));
+  display: grid;
+  row-gap: 20px;
 }
 
-.advices .article__list__title  {
+.article__list__text:not(:last-child) {
+  margin-block-end: 15px;
+}
+
+.advices .article__list__title {
+  margin-bottom: 10px;
   font-weight: 400;
 }
 
@@ -143,8 +146,6 @@
   color: var(--accent-color);
   margin-bottom: min(20px, max(10px, calc(100vi / 10 - 28px)));
 }
-
-
 
 .article__gallery {
   display: grid;
@@ -156,7 +157,6 @@
     "books"
     "street";
   gap: 10px;
-  inline-size: 100%;
 }
 
 .article__img {
@@ -182,7 +182,7 @@
   grid-area: books;
 }
 
-.image-street{
+.image-street {
   grid-area: street;
 }
 
@@ -227,23 +227,19 @@
     margin-block-end: 80px;
   }
 
-  .article {
+  .section {
     display: grid;
     grid-template-columns: 30.7vi 1fr;
     column-gap: 20px;
   }
 
-  .article__list__text:not(:last-of-type) {
+  .section__list__text:not(:last-of-type) {
     margin-bottom: 15px;
   }
 
   .causes-list {
     flex-direction: column;
     grid-column: 1 / -1;
-  }
-
-  .advices {
-    display: block;
   }
 
   .images {
@@ -260,10 +256,6 @@
     "tape books ice-cream"
     "tape street street";
     
-  }
-
-  .article:nth-of-type(3) .article__list:last-of-type .article__list__title {
-    margin-block-end: 20px;
   }
 
   .footer__title {
@@ -289,24 +281,18 @@
     margin-block-end: 85px;
   }
 
-  .article {
+  .section {
     grid-template-columns: 315px 1fr;
   }
 
   .causes-list {
-    grid-column: 1 / -1;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .causes-list .article__list__item {
-    flex: 1 1 0;
+  .causes-list .section__list__item {
+    flex: 1 0 314px;
   }
 
-  .section-causes .list{
-    display: grid;
-    grid-template-columns: repeat(3, 315px);
-    grid-column: 1 / -1;
-  }
 
 }

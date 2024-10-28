@@ -23,6 +23,18 @@
   --title-bg: var(--decor-color);
 }
 
+.theme_dark .header__decor {
+  display: block;
+}
+
+.theme_dark .header__theme-menu-button_active {
+  outline: 1px solid #ff0070;
+}
+
+.theme_dark .article__list__link {
+  text-shadow: 2px 2px #ff0070;
+}
+
 @media (prefers-color-scheme: dark) and (hover: hover) {
   button:hover {
     outline: 1px solid #ff007040;
@@ -30,5 +42,9 @@
 
   a:hover {
     border-block-end: 1px solid #f1b2ce;
+  }
+
+  .header__decor {
+    display: block;
   }
 }
