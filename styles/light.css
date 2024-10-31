@@ -17,16 +17,6 @@
     --corner-color: var(--decor-color);
   }
 
-  .page.theme_auto {
-    --bg-image: url(../images/cover-image-light.png);
-    --bg-color: #f1b2ce;
-    --decor-color: #353430;
-    --text-color: #353430;
-    --title-color: #ffc2e6;
-    --title-bg: #ff8dcb;
-    --accent-color: var(--decor-color);
-    --corner-color: var(--decor-color);
-  }
 
   .header__decor {
     display: none;
